@@ -1,3 +1,21 @@
 body {
     background-color: rgb(79, 153, 128)
 };
+
+.card {
+
+};
+
+.card img {
+height: 350px;
+width: 350px;
+};
+
+#pieForDinner {
+    width: 30%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    border: 4px;
+    color: antiquewhite;
+    text-align: center;
+};
