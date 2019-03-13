@@ -21,8 +21,10 @@ body {
         margin-top: 10px;
         margin-bottom: 10px;
         border: 2px solid black;
-        color: white;
+        color: rgb(49, 68, 62);
         text-align: center;
+        border-radius: 5%;
+        background-color: 
       }
       
       .card img {
