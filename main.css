@@ -1,21 +1,31 @@
 body {
-    background-color: rgb(79, 153, 128)
-};
-
-.card {
-
-};
-
-.card img {
-height: 350px;
-width: 350px;
-};
-
+    background-color: rgb(79, 153, 128);
+}
 #pieForDinner {
-    width: 30%;
-    margin-top: 10%;
-    margin-bottom: 10%;
-    border: 4px;
-    color: antiquewhite;
-    text-align: center;
-};
+        padding: 0;
+        margin: 0;
+        list-style: none;
+      
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+      
+        -webkit-flex-flow: row wrap;
+        justify-content: space-around;
+      }
+      
+      .card {
+        width: 30%;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        border: 2px solid black;
+        color: white;
+        text-align: center;
+      }
+      
+      .card img {
+        height: 200px;
+        width: 200px;
+      }
