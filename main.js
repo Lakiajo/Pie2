@@ -64,7 +64,9 @@ const printToDom = (divId, textToPrint) => {
     console.log(textToPrint)
     selectedDiv.innerHTML += textToPrint;
 };
-
+const pieBuilder = (monkeyButts) => {
+  let domString = '';
+};
 const pieType = () => {
     let domString = '';
     for (let l = 0; l < pies.length; l++){
@@ -77,17 +79,40 @@ const pieType = () => {
     printToDom('pieForDinner', domString);
 };
 
-const buttonClick = () => {
+const buttonClick = (e) => {
     console.log('A button, you have clicked.');
-};
+    //loop over pies array
+    //if values of instructors is the same as the button if, keep that object
+    //once we have all the pies for that instructor, call piebuilder
+    const buttonId = e.target.id;
+    const selectedPies = [];
+
+    pies.forEach((pies) => {
+      if(pies.instructor === buttonId) {
+selectedPies.push(pies);
+      }
+    });
+    if(buttonId === 'All') {
+    pieBuilder(pies);
+    } 
+    else{
+      pieBuilder(selectedPies);
+    }
+  };
+  
 
 const buttonEvents = () => {
     document.getElementById('Zoe').addEventListener('click', buttonClick);
+    document.getElementById('Saul').addEventListener('click', buttonClick);
+    document.getElementById('Michael').addEventListener('click', buttonClick);
+    document.getElementById('All').addEventListener('click', buttonClick);
 };
 
 
 const init = () => {
     buttonEvents();
     pieType();
+    pieBuilder();
+    
 };
 init ();
